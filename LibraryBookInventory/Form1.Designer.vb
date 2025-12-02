@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.tbTitle = New System.Windows.Forms.TextBox()
@@ -41,6 +41,7 @@ Partial Class Form1
         Me.cbxAvailable = New System.Windows.Forms.CheckBox()
         Me.cbxBorrowed = New System.Windows.Forms.CheckBox()
         Me.cbxNA = New System.Windows.Forms.CheckBox()
+        Me.btnConnect = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -167,6 +168,7 @@ Partial Class Form1
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
+        Me.cmbCategory.Items.AddRange(New Object() {"Novel", "Sci-Fi", "Fantrasy", "Mystery", "History", "Fiction", "Adventure", "Literary"})
         Me.cmbCategory.Location = New System.Drawing.Point(577, 58)
         Me.cmbCategory.Name = "cmbCategory"
         Me.cmbCategory.Size = New System.Drawing.Size(190, 21)
@@ -222,12 +224,22 @@ Partial Class Form1
         Me.cbxNA.Text = "N/A"
         Me.cbxNA.UseVisualStyleBackColor = True
         '
+        'btnConnect
+        '
+        Me.btnConnect.Location = New System.Drawing.Point(12, 9)
+        Me.btnConnect.Name = "btnConnect"
+        Me.btnConnect.Size = New System.Drawing.Size(83, 27)
+        Me.btnConnect.TabIndex = 19
+        Me.btnConnect.Text = "Connect"
+        Me.btnConnect.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnConnect)
         Me.Controls.Add(Me.cbxNA)
         Me.Controls.Add(Me.cbxBorrowed)
         Me.Controls.Add(Me.cbxAvailable)
@@ -274,4 +286,5 @@ Partial Class Form1
     Friend WithEvents cbxAvailable As CheckBox
     Friend WithEvents cbxBorrowed As CheckBox
     Friend WithEvents cbxNA As CheckBox
+    Friend WithEvents btnConnect As Button
 End Class
