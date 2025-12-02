@@ -22,43 +22,44 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.tbTitle = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tbID = New System.Windows.Forms.TextBox()
+        Me.tbAuthor = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnView = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.cmbCategory = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.cbxAvailable = New System.Windows.Forms.CheckBox()
+        Me.cbxBorrowed = New System.Windows.Forms.CheckBox()
+        Me.cbxNA = New System.Windows.Forms.CheckBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnCreate
         '
-        Me.Button1.Location = New System.Drawing.Point(28, 400)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 38)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Create"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCreate.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCreate.Location = New System.Drawing.Point(28, 400)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(101, 38)
+        Me.btnCreate.TabIndex = 0
+        Me.btnCreate.Text = "Create"
+        Me.btnCreate.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'tbTitle
         '
-        Me.TextBox1.Location = New System.Drawing.Point(71, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(419, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.tbTitle.Location = New System.Drawing.Point(71, 58)
+        Me.tbTitle.Name = "tbTitle"
+        Me.tbTitle.Size = New System.Drawing.Size(419, 20)
+        Me.tbTitle.TabIndex = 1
         '
         'Label1
         '
@@ -79,19 +80,19 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(739, 243)
         Me.DataGridView1.TabIndex = 3
         '
-        'TextBox2
+        'tbID
         '
-        Me.TextBox2.Location = New System.Drawing.Point(363, 101)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.tbID.Location = New System.Drawing.Point(363, 101)
+        Me.tbID.Name = "tbID"
+        Me.tbID.Size = New System.Drawing.Size(127, 20)
+        Me.tbID.TabIndex = 4
         '
-        'TextBox3
+        'tbAuthor
         '
-        Me.TextBox3.Location = New System.Drawing.Point(84, 101)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(227, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.tbAuthor.Location = New System.Drawing.Point(84, 101)
+        Me.tbAuthor.Name = "tbAuthor"
+        Me.tbAuthor.Size = New System.Drawing.Size(227, 20)
+        Me.tbAuthor.TabIndex = 5
         '
         'Label2
         '
@@ -123,49 +124,53 @@ Partial Class Form1
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "ID :"
         '
-        'Button2
+        'btnView
         '
-        Me.Button2.Location = New System.Drawing.Point(173, 400)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 38)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "View"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnView.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnView.Location = New System.Drawing.Point(173, 400)
+        Me.btnView.Name = "btnView"
+        Me.btnView.Size = New System.Drawing.Size(101, 38)
+        Me.btnView.TabIndex = 9
+        Me.btnView.Text = "View"
+        Me.btnView.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnUpdate
         '
-        Me.Button3.Location = New System.Drawing.Point(333, 400)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 38)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Update"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnUpdate.Location = New System.Drawing.Point(333, 400)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(101, 38)
+        Me.btnUpdate.TabIndex = 10
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnEdit
         '
-        Me.Button4.Location = New System.Drawing.Point(502, 400)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(101, 38)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Edit"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnEdit.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnEdit.Location = New System.Drawing.Point(502, 400)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(101, 38)
+        Me.btnEdit.TabIndex = 11
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btnDelete
         '
-        Me.Button5.Location = New System.Drawing.Point(666, 400)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(101, 38)
-        Me.Button5.TabIndex = 12
-        Me.Button5.Text = "Delete"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnDelete.Location = New System.Drawing.Point(666, 400)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(101, 38)
+        Me.btnDelete.TabIndex = 12
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'cmbCategory
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(577, 58)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(190, 21)
-        Me.ComboBox1.TabIndex = 13
+        Me.cmbCategory.FormattingEnabled = True
+        Me.cmbCategory.Location = New System.Drawing.Point(577, 58)
+        Me.cmbCategory.Name = "cmbCategory"
+        Me.cmbCategory.Size = New System.Drawing.Size(190, 21)
+        Me.cmbCategory.TabIndex = 13
         '
         'Label5
         '
@@ -187,35 +192,35 @@ Partial Class Form1
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Availability :"
         '
-        'CheckBox1
+        'cbxAvailable
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(577, 104)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(69, 17)
-        Me.CheckBox1.TabIndex = 16
-        Me.CheckBox1.Text = "Available"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbxAvailable.AutoSize = True
+        Me.cbxAvailable.Location = New System.Drawing.Point(577, 104)
+        Me.cbxAvailable.Name = "cbxAvailable"
+        Me.cbxAvailable.Size = New System.Drawing.Size(69, 17)
+        Me.cbxAvailable.TabIndex = 16
+        Me.cbxAvailable.Text = "Available"
+        Me.cbxAvailable.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'cbxBorrowed
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(644, 104)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(71, 17)
-        Me.CheckBox2.TabIndex = 17
-        Me.CheckBox2.Text = "Borrowed"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.cbxBorrowed.AutoSize = True
+        Me.cbxBorrowed.Location = New System.Drawing.Point(644, 104)
+        Me.cbxBorrowed.Name = "cbxBorrowed"
+        Me.cbxBorrowed.Size = New System.Drawing.Size(71, 17)
+        Me.cbxBorrowed.TabIndex = 17
+        Me.cbxBorrowed.Text = "Borrowed"
+        Me.cbxBorrowed.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'cbxNA
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(721, 104)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(46, 17)
-        Me.CheckBox3.TabIndex = 18
-        Me.CheckBox3.Text = "N/A"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.cbxNA.AutoSize = True
+        Me.cbxNA.Location = New System.Drawing.Point(721, 104)
+        Me.cbxNA.Name = "cbxNA"
+        Me.cbxNA.Size = New System.Drawing.Size(46, 17)
+        Me.cbxNA.TabIndex = 18
+        Me.cbxNA.Text = "N/A"
+        Me.cbxNA.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -223,25 +228,25 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.CheckBox3)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.cbxNA)
+        Me.Controls.Add(Me.cbxBorrowed)
+        Me.Controls.Add(Me.cbxAvailable)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.cmbCategory)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.tbAuthor)
+        Me.Controls.Add(Me.tbID)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.tbTitle)
+        Me.Controls.Add(Me.btnCreate)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -250,23 +255,23 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnCreate As Button
+    Friend WithEvents tbTitle As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tbID As TextBox
+    Friend WithEvents tbAuthor As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents btnView As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents cmbCategory As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents cbxAvailable As CheckBox
+    Friend WithEvents cbxBorrowed As CheckBox
+    Friend WithEvents cbxNA As CheckBox
 End Class
