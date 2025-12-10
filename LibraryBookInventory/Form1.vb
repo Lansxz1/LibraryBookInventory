@@ -5,6 +5,56 @@ Public Class Form1
     Dim conn As MySqlConnection
     Dim COMMAND As MySqlCommand
 
+    Private Sub ApplyFilters()
+        Try
+            Dim query As String = "SELECT id, title, author, category, availability FROM library_tbl WHERE is_deleted = 0"
+
+            If tbSearch.Text.Trim() <> "" Then
+                query &= " AND (id LIKE @search OR title LIKE @search OR author LIKE @search)"
+            End If
+
+            If cmbAvailability.SelectedIndex > 0 Then
+                query &= " AND availability = @availability"
+            End If
+
+            If cmbSort.SelectedIndex = 0 Then
+                query &= " ORDER BY id ASC"
+            ElseIf cmbSort.SelectedIndex = 1 Then
+                query &= " ORDER BY id DESC"
+            End If
+
+            Using conn As New MySqlConnection("server=localhost; userid=root; password=root; database=library_inventory")
+                Using cmd As New MySqlCommand(query, conn)
+                    If tbSearch.Text.Trim() <> "" Then
+                        cmd.Parameters.AddWithValue("@search", "%" & tbSearch.Text.Trim() & "%")
+                    End If
+
+                    If cmbAvailability.SelectedIndex > 0 Then
+                        cmd.Parameters.AddWithValue("@availability", cmbAvailability.Text)
+                    End If
+
+                    Dim adapter As New MySqlDataAdapter(cmd)
+                    Dim table As New DataTable()
+                    adapter.Fill(table)
+                    DataGridView1.DataSource = table
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub tbSearch_TextChanged(sender As Object, e As EventArgs) Handles tbSearch.TextChanged
+        ApplyFilters()
+    End Sub
+
+    Private Sub cmbAvailability_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbAvailability.SelectedIndexChanged
+        ApplyFilters()
+    End Sub
+
+    Private Sub cmbSort_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSort.SelectedIndexChanged
+        ApplyFilters()
+    End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Try
@@ -202,4 +252,9 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cmbAvailability.SelectedIndex = 0
+        cmbSort.SelectedIndex = 0
+        cmbCategory.SelectedIndex = 0
+    End Sub
 End Class

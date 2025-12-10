@@ -39,6 +39,11 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cbxAvailable = New System.Windows.Forms.CheckBox()
         Me.cbxNA = New System.Windows.Forms.CheckBox()
+        Me.tbSearch = New System.Windows.Forms.TextBox()
+        Me.cmbSort = New System.Windows.Forms.ComboBox()
+        Me.cmbAvailability = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +59,7 @@ Partial Class Form1
         '
         'tbTitle
         '
-        Me.tbTitle.Location = New System.Drawing.Point(71, 58)
+        Me.tbTitle.Location = New System.Drawing.Point(71, 46)
         Me.tbTitle.Name = "tbTitle"
         Me.tbTitle.Size = New System.Drawing.Size(419, 20)
         Me.tbTitle.TabIndex = 1
@@ -81,14 +86,14 @@ Partial Class Form1
         '
         'tbID
         '
-        Me.tbID.Location = New System.Drawing.Point(363, 101)
+        Me.tbID.Location = New System.Drawing.Point(361, 77)
         Me.tbID.Name = "tbID"
         Me.tbID.Size = New System.Drawing.Size(127, 20)
         Me.tbID.TabIndex = 4
         '
         'tbAuthor
         '
-        Me.tbAuthor.Location = New System.Drawing.Point(84, 101)
+        Me.tbAuthor.Location = New System.Drawing.Point(84, 75)
         Me.tbAuthor.Name = "tbAuthor"
         Me.tbAuthor.Size = New System.Drawing.Size(227, 20)
         Me.tbAuthor.TabIndex = 5
@@ -97,7 +102,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(25, 60)
+        Me.Label2.Location = New System.Drawing.Point(25, 51)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 15)
         Me.Label2.TabIndex = 6
@@ -107,7 +112,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(25, 104)
+        Me.Label3.Location = New System.Drawing.Point(25, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 15)
         Me.Label3.TabIndex = 7
@@ -117,7 +122,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(330, 106)
+        Me.Label4.Location = New System.Drawing.Point(328, 79)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(27, 15)
         Me.Label4.TabIndex = 8
@@ -158,16 +163,16 @@ Partial Class Form1
         '
         Me.cmbCategory.FormattingEnabled = True
         Me.cmbCategory.Items.AddRange(New Object() {"Novel", "Sci-Fi", "Fantrasy", "Mystery", "History", "Fiction", "Adventure", "Literary"})
-        Me.cmbCategory.Location = New System.Drawing.Point(577, 58)
+        Me.cmbCategory.Location = New System.Drawing.Point(577, 45)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(190, 21)
+        Me.cmbCategory.Size = New System.Drawing.Size(172, 21)
         Me.cmbCategory.TabIndex = 13
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(511, 63)
+        Me.Label5.Location = New System.Drawing.Point(507, 48)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 15)
         Me.Label5.TabIndex = 14
@@ -177,7 +182,7 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(500, 104)
+        Me.Label6.Location = New System.Drawing.Point(507, 85)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 15)
         Me.Label6.TabIndex = 15
@@ -186,7 +191,7 @@ Partial Class Form1
         'cbxAvailable
         '
         Me.cbxAvailable.AutoSize = True
-        Me.cbxAvailable.Location = New System.Drawing.Point(577, 104)
+        Me.cbxAvailable.Location = New System.Drawing.Point(588, 83)
         Me.cbxAvailable.Name = "cbxAvailable"
         Me.cbxAvailable.Size = New System.Drawing.Size(69, 17)
         Me.cbxAvailable.TabIndex = 16
@@ -196,12 +201,57 @@ Partial Class Form1
         'cbxNA
         '
         Me.cbxNA.AutoSize = True
-        Me.cbxNA.Location = New System.Drawing.Point(652, 104)
+        Me.cbxNA.Location = New System.Drawing.Point(684, 83)
         Me.cbxNA.Name = "cbxNA"
         Me.cbxNA.Size = New System.Drawing.Size(46, 17)
         Me.cbxNA.TabIndex = 18
         Me.cbxNA.Text = "N/A"
         Me.cbxNA.UseVisualStyleBackColor = True
+        '
+        'tbSearch
+        '
+        Me.tbSearch.Location = New System.Drawing.Point(84, 108)
+        Me.tbSearch.Name = "tbSearch"
+        Me.tbSearch.Size = New System.Drawing.Size(227, 20)
+        Me.tbSearch.TabIndex = 19
+        '
+        'cmbSort
+        '
+        Me.cmbSort.FormattingEnabled = True
+        Me.cmbSort.Items.AddRange(New Object() {"Ascending", "Descending"})
+        Me.cmbSort.Location = New System.Drawing.Point(360, 106)
+        Me.cmbSort.Name = "cmbSort"
+        Me.cmbSort.Size = New System.Drawing.Size(128, 21)
+        Me.cmbSort.TabIndex = 20
+        '
+        'cmbAvailability
+        '
+        Me.cmbAvailability.FormattingEnabled = True
+        Me.cmbAvailability.Items.AddRange(New Object() {"Available", "Not Available"})
+        Me.cmbAvailability.Location = New System.Drawing.Point(510, 106)
+        Me.cmbAvailability.Name = "cmbAvailability"
+        Me.cmbAvailability.Size = New System.Drawing.Size(239, 21)
+        Me.cmbAvailability.TabIndex = 21
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(25, 110)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(53, 15)
+        Me.Label7.TabIndex = 22
+        Me.Label7.Text = "Search :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(320, 109)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(35, 15)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "Sort:"
         '
         'Form1
         '
@@ -209,6 +259,11 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.cmbAvailability)
+        Me.Controls.Add(Me.cmbSort)
+        Me.Controls.Add(Me.tbSearch)
         Me.Controls.Add(Me.cbxNA)
         Me.Controls.Add(Me.cbxAvailable)
         Me.Controls.Add(Me.Label6)
@@ -251,4 +306,9 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents cbxAvailable As CheckBox
     Friend WithEvents cbxNA As CheckBox
+    Friend WithEvents tbSearch As TextBox
+    Friend WithEvents cmbSort As ComboBox
+    Friend WithEvents cmbAvailability As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
 End Class
