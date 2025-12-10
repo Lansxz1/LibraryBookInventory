@@ -282,7 +282,7 @@ Partial Class Form1
         Me.Controls.Add(Me.tbTitle)
         Me.Controls.Add(Me.btnCreate)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Welcome!"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
